@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <style type="text/css">
+        img {
+  /*  width: 500px;
+    height: 200px;*/
+    border:2px solid #fff;
+    
+    /*-moz-box-shadow: 10px 10px 5px #ccc;
+    -webkit-box-shadow: 10px 10px 5px #ccc;*/
+    /*box-shadow: 10px 10px 5px #ccc;*/
+    -moz-border-radius:25px;
+    -webkit-border-radius:25px;
+    border-radius:15px;
+  }
+  
+
+      </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script>
+    <link rel="stylesheet" type="text/css" href="mobileui/style.css">
+        <meta name="format-detection" content="telephone=no">
+        <meta charset="utf-8">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1,">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+       
+    </head>
+    
+    <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="mobileui/mobileui.js"></script>
+      <script type="text/javascript" src="js/index.js"></script>
+<body>
+  <div class="swiper-container swiper-container-fullscreen">
+
+      <div class="swiper-wrapper">
+          <!-- Add slide 1 -->
+          <div class="swiper-slide vertical-align-center black-opacity-90">
+
+       <!--      <div class="header light-blue-900 radius margin-top text-bold">
+
+              <div class="left icon-circle">
+
+                <img src="images/5.PNG" alt="Smiley face"  >
+              
+              </div>
+             
+           
+            </div> -->
+
+
+            <!-- <div class="indigo-900 align-center radius-big border padding">
+              <img src="images/logo1.png" alt="Smiley face" width="50" height="50" >
+             <h1 style="font-family: 'Monoton', cursive;font-size:40px">
+              MinuteWise
+               </h1>
+            </div> -->
+
+             <div class=" indigo item white mark border-purple margin-button shadow">
+
+              <img src="images/5.PNG" alt="images/4.png" align="left" width="50" height="50">
+    <h2  style="font-family: 'Monoton', cursive;font-size:30px , color : "red"><strong>MinuteWise Price</strong></h2>
+           </div>
+
+
+             <br>
+            <br>
+            <br>
+            <br>
+            <script type="text/javascript">
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+  animationEnabled: true,
+    theme: "dark2",
+  title: {
+      
+    text: "Daily Email Analysis"
+  },
+  axisX: {
+    valueFormatString: "DDD",
+    minimum: new Date(2017, 1, 5, 23),
+    maximum: new Date(2017, 1, 12, 1)
+  },
+  axisY: {
+    title: "Number of Messages"
+  },
+  legend: {
+    verticalAlign: "top",
+    horizontalAlign: "right",
+    dockInsidePlotArea: true
+  },
+  toolTip: {
+    shared: true
+  },
+  data: [{
+    name: "Received",
+    showInLegend: true,
+    legendMarkerType: "square",
+    type: "area",
+    color: "#343deb",
+    markerSize: 0,
+    dataPoints: [
+      { x: new Date(2017, 1, 6), y: 220 },
+      { x: new Date(2017, 1, 7), y: 120 },
+      { x: new Date(2017, 1, 8), y: 144 },
+      { x: new Date(2017, 1, 9), y: 162 },
+      { x: new Date(2017, 1, 10), y: 129 },
+      { x: new Date(2017, 1, 11), y: 109 },
+      { x: new Date(2017, 1, 12), y: 129 }
+    ]
+  },
+  {
+    name: "Sent",
+    showInLegend: true,
+    legendMarkerType: "square",
+    type: "area",
+    color: "#16f521",
+    markerSize: 0,
+    dataPoints: [
+      { x: new Date(2017, 1, 6), y: 42 },
+      { x: new Date(2017, 1, 7), y: 34 },
+      { x: new Date(2017, 1, 8), y: 29 },
+      { x: new Date(2017, 1, 9), y: 42 },
+      { x: new Date(2017, 1, 10), y: 53},
+      { x: new Date(2017, 1, 11), y: 15 },
+      { x: new Date(2017, 1, 12), y: 12 }
+    ]
+  }]
+});
+chart.render();
+
+}
+</script>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+
+            <!-- <img src="http://192.168.217.87:5000" alt="images/4.png" width="500" height="200"> -->
+             <br>
+              <br>
+               <br>
+<!--                <div class="list padding grey-100">
+
+  <div class="item white mark border-green margin-button shadow">
+    <h2><strong>Current Price</strong></h2>
+    <h1 id ="p1" ><strong> Updating ..</strong></h1>
+
+    <p class="text-green" id= "time1">..</p>
+  </div>
+
+
+
+ <script type="text/javascript">
+
+     $(document).ready(function(){
+  
+    $.get("http://192.168.217.87:5000/2", function(data, status){
+     x = ( data.split("/"));
+     //  console.log( x[0]);
+     // console.log( x[1]);
+
+document.getElementById("time1").innerHTML = x[0];
+document.getElementById("p1").innerHTML = "$ " +  x[1];
+    });
+  });
+ 
+
+ </script>
+
+
+  <div class="item white mark border-purple margin-button shadow">
+    <h2><strong>Predicted Price</strong></h2>
+    <h1 id ="p2" ><strong> Updating ..</strong></h1>
+    <i id="up" class="icon ion-arrow-graph-up-right icon-big green"></i>
+    <i id="down" class="icon ion-arrow-graph-down-right icon-big red"></i>
+
+    <p id ="p2">Prediction after 2 minutes</p>
+
+  </div>
+  <script type="text/javascript">
+
+    $(document).ready(function(){
+  
+    $.get("http://192.168.217.87:5000/1", function(data, status){
+      
+    y = (data.split(" "))
+    console.log(y[0]);
+    console.log(y[1]);
+
+      document.getElementById("p2").innerHTML = "$ " + y[0];
+
+
+        if(y[1] == '0') {
+document.getElementById("up").style.display = "none";
+document.getElementById("down").style.display = "block";
+}
+else {
+document.getElementById("up").style.display = "block";
+document.getElementById("down").style.display = "none";
+}
+   
+
+    });
+  });
+
+ 
+
+  </script>
+ 
+</div> -->
+        <br>
+        <br>
+
+ <button class="teal full radius margin-bottom" id="myButton2" onclick=" loadingElement('myButton2', 'Please wait...') , window.location.reload()">
+    Reload
+  </button>
+
+  <br>
+        <br>
+<br>
+        <br>
+<br>
+        <br>
+
+          </div>
+
+
+          <!-- Add slide 2 -->
+          <div class="swiper-slide vertical-align-center light-green-900">
+            <!-- <i class="icon ion-videocamera"></i>
+            <h1>Movie Tickets</h1>
+            <p>Book movie tickets for your family and friends!</p> -->
+            <div class=" indigo item white mark border-purple margin-button shadow">
+
+              <img src="images/5.PNG" alt="images/4.png" align="left" width="50" height="50">
+    <h2  style="font-family: 'Monoton', cursive;font-size:30px , color : "red"><strong>DayWise Prediction</strong></h2>
+           </div>
+           <br>
+
+           <!--  <img src="http://192.168.217.87:5000" alt="images/4.png" width="500" height="200"> -->
+
+            <img src="images/4.png" alt="images/4.png" width="500" height="200">
+
+             <br>
+           
+               <div class="list padding grey-100">
+
+  <div class="item white mark border-green margin-button shadow">
+    <h2><strong>Current Price</strong></h2>
+    <h1 id ="p1" ><strong> Updating ..</strong></h1>
+
+    <p class="text-green" id= "time1">..</p>
+  </div>
+
+
+
+ <script type="text/javascript">
+
+     $(document).ready(function(){
+  
+    $.get("http://192.168.217.87:5000/2", function(data, status){
+     x = ( data.split("/"));
+     //  console.log( x[0]);
+     // console.log( x[1]);
+
+document.getElementById("time1").innerHTML = x[0];
+document.getElementById("p1").innerHTML = "$ " +  x[1];
+    });
+  });
+ 
+
+ </script>
+
+
+  <div class="item white mark border-purple margin-button shadow">
+    <h2><strong>Predicted Price</strong></h2>
+    <h1 id ="p2" ><strong> Updating ..</strong></h1>
+    <i id="up" class="icon ion-arrow-graph-up-right icon-big green"></i>
+    <i id="down" class="icon ion-arrow-graph-down-right icon-big red"></i>
+
+    <p id ="p2">Prediction after 2 minutes</p>
+
+  </div>
+  <script type="text/javascript">
+
+    $(document).ready(function(){
+  
+    $.get("http://192.168.217.87:5000/1", function(data, status){
+      
+    y = (data.split(" "))
+    console.log(y[0]);
+    console.log(y[1]);
+
+      document.getElementById("p2").innerHTML = "$ " + y[0];
+
+
+        if(y[1] == '0') {
+document.getElementById("up").style.display = "none";
+document.getElementById("down").style.display = "block";
+}
+else {
+document.getElementById("up").style.display = "block";
+document.getElementById("down").style.display = "none";
+}
+   
+
+    });
+  });
+
+ 
+
+  </script>
+ 
+</div>
+        <br>
+     
+
+   <button class="teal full radius margin-bottom" id="myButton" onclick=" loadingElement('myButton'), window.location.reload()">
+    Reload
+  </button>
+
+  <br>
+        
+
+          </div>
+
+
+          <!-- Add slide 3 -->
+          <div class="swiper-slide vertical-align-center orange-900">
+            <div class=" indigo item white mark border-purple margin-button shadow">
+
+              <img src="images/5.PNG" alt="images/4.png" align="left" width="50" height="50">
+    <h2  style="font-family: 'Monoton', cursive;font-size:30px , color : "red"><strong>Weekly Prediction</strong></h2>
+           </div>
+
+
+             <br>
+            <br>
+            <br>
+            <br>
+
+
+
+
+            <img src="http://192.168.217.87:5000" alt="images/4.png" width="500" height="200">
+             <br>
+              <br>
+               <br>
+               <div class="list padding grey-100">
+
+  <div class="item white mark border-green margin-button shadow">
+    <h2><strong>Current Price</strong></h2>
+    <h1 id ="p1" ><strong> Updating ..</strong></h1>
+
+    <p class="text-green" id= "time1">..</p>
+  </div>
+
+
+
+ <script type="text/javascript">
+
+     $(document).ready(function(){
+  
+    $.get("http://192.168.217.87:5000/2", function(data, status){
+     x = ( data.split("/"));
+     //  console.log( x[0]);
+     // console.log( x[1]);
+
+document.getElementById("time1").innerHTML = x[0];
+document.getElementById("p1").innerHTML = "$ " +  x[1];
+    });
+  });
+ 
+
+ </script>
+
+
+  <div class="item white mark border-purple margin-button shadow">
+    <h2><strong>Predicted Price</strong></h2>
+    <h1 id ="p2" ><strong> Updating ..</strong></h1>
+    <i id="up" class="icon ion-arrow-graph-up-right icon-big green"></i>
+    <i id="down" class="icon ion-arrow-graph-down-right icon-big red"></i>
+
+    <p id ="p2">Prediction after 2 minutes</p>
+
+  </div>
+  <script type="text/javascript">
+
+    $(document).ready(function(){
+  
+    $.get("http://192.168.217.87:5000/1", function(data, status){
+      
+    y = (data.split(" "))
+    console.log(y[0]);
+    console.log(y[1]);
+
+      document.getElementById("p2").innerHTML = "$ " + y[0];
+
+
+        if(y[1] == '0') {
+document.getElementById("up").style.display = "none";
+document.getElementById("down").style.display = "block";
+}
+else {
+document.getElementById("up").style.display = "block";
+document.getElementById("down").style.display = "none";
+}
+   
+
+    });
+  });
+
+ 
+
+  </script>
+ 
+</div>
+        <br>
+        <br>
+
+ <button class="teal full radius margin-bottom" id="myButton2" onclick=" loadingElement('myButton2', 'Please wait...') , window.location.reload()">
+    Reload
+  </button>
+
+  <br>
+        <br>
+<br>
+        <br>
+<br>
+        <br>
+
+          </div>
+
+      
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination swiper-pagination-white"></div>
+  </div>
+  <script type="text/javascript">
+    new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true
+    });
+  </script>
+</body>
+</html>
