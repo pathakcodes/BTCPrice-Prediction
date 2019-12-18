@@ -4,4 +4,7 @@
 ## Cross Platform app using Apace Cordova.
 
 # App Video
-<iframe width="560" height="315" src="https://www.youtube.com/embed/uZtAWks0aYQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=uZtAWks0aYQ
+" target="_blank"><img src="http://img.youtube.com/vi/uZtAWks0aYQ/0.jpg" 
+alt="Video Link" width="240" height="180" border="10" /></a>
